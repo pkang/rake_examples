@@ -1,0 +1,8 @@
+# rake mycode.o
+rule '.c' do |t|
+  puts 'rule: ' + t.name
+end
+
+rule '.o' => ['.c'] do |t|
+  sh "echo cc #{t.source} -c -o #{t.name}"
+end

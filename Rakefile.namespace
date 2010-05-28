@@ -1,0 +1,16 @@
+namespace "main" do
+  desc "build"
+  task :build do |t|
+    puts t
+  end
+end
+
+namespace "samples" do
+  desc "build"
+  task :build do
+    puts t
+  end
+end
+
+desc "top build"
+task :build => ["main:build", "samples:build"]

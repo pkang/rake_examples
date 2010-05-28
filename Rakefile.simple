@@ -1,0 +1,21 @@
+task :prereq1 do |t|
+  puts t
+end
+
+task :prereq2 do |t|
+  puts t
+end
+
+task :another do |t|
+  puts t
+end
+
+
+task :name
+task :name => [:prereq1, :prereq2] do |t|
+     puts t
+end
+task :name => [:another]
+task :name do |t|
+     puts t.to_s + "2"
+end

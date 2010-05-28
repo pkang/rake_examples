@@ -1,0 +1,6 @@
+# rake -T
+desc "This is task1"
+task :task1
+
+desc "This is task2"
+task :task2
